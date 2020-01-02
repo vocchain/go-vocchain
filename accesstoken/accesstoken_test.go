@@ -78,7 +78,7 @@ func TestCheck(t *testing.T) {
 		t.Fatal("invalid token check passed")
 	}
 }
-
+//test delete 
 func TestDelete(t *testing.T) {
 	ctx := context.Background()
 	testDB := dbm.NewDB("testdb", "leveldb", "temp")
@@ -99,16 +99,7 @@ func TestDelete(t *testing.T) {
 	}
 }
 
-func TestDeleteWithInvalidId(t *testing.T) {
-	testDB := dbm.NewDB("testdb", "leveldb", "temp")
-	defer os.RemoveAll("temp")
-	cs := NewStore(testDB)
 
-	err := cs.Delete("@")
-	if errors.Root(err) != ErrBadID {
-		t.Errorf("Deletion with invalid id success, while it should not")
-	}
-}
 
 func mustCreateToken(ctx context.Context, t *testing.T, cs *CredentialStore, id, typ string) *Token {
 	token, err := cs.Create(id, typ)
