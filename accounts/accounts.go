@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-voc-core library. If not, see <http://www.gnu.org/licenses/>.
 
-// Package accounts implements high level voc-core account management.
 package accounts
 
 import (
