@@ -17,7 +17,7 @@ import (
 	"github.com/vocchain/go-vocchain/protocol"
 	"github.com/vocchain/go-vocchain/testutil"
 )
-
+//  test create account
 func TestCreateAccountWithUppercase(t *testing.T) {
 	m := mockAccountManager(t)
 	alias := "UPPER"
